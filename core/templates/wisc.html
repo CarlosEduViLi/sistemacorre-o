@@ -1,19 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corretor WISC - Escalas Wechsler</title>
-    <link rel="stylesheet" href="Wisc.css">
+    <link rel="stylesheet" href="{% static 'css/Wisc.css' %}">
 </head>
 <body>
     <div class="container">
         <div class="back-button-container">
-            <a href="index.html" class="back-button">← Voltar para a Página Inicial</a>
+            <a href="{% url 'index' %}" class="back-button">← Voltar para a Página Inicial</a>
         </div>
 
         <div class="header-content">
-            <img src="logo.png" alt="Logo Wechsler" class="logo">
+            <img src="{% static 'img/Logo.png' %}" alt="Logo Wechsler" class="logo">
             <h2>Correção - WISC</h2>
         </div>
 
@@ -84,6 +85,6 @@
             </div>
     </div>
 
-    <script src="wisc.js"></script>
+    <script src="{% static 'js/Wisc.js' %}"></script>
     </body>
 </html>

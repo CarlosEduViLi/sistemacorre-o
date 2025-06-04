@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> PsiMetrix - Construção de Laudos</title>
-    <link rel="stylesheet" href="/index/index.css">
+    <link rel="stylesheet" href="{% static 'css/index_page.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -15,9 +16,9 @@
                 <span>PsiMetrix</span>
             </div>
             <nav class="main-nav">
-                <a href="/index/index.htm" class="nav-item">Início</a>
-                <a href="/Planos/planos.html" class="nav-item current-page">Planos</a>
-                <a href="/login_register/login_register.html" class="nav-item">Login</a>
+                <a href="{% url 'index_page' %}" class="nav-item">Início</a>
+                <a href="{% url 'planos' %}" class="nav-item current-page">Planos</a>
+                <a href="{% url 'login_register' %}" class="nav-item">Login</a>
                 <a href="sobre-nos.html" class="nav-item">Sobre nós</a>
                 </nav>
         </header>
@@ -25,7 +26,7 @@
             <section class="welcome-section card">
                 <h1>PsiMetrix: A ferramenta que otimiza a elaboração de laudos psicológicos.</h1>
                 <p>Simplifique a elaboração de documentos com precisão e agilidade. Foque na sua prática, nós cuidamos da burocracia. PsiMetrix: Sua eficiência, nosso compromisso.</p>
-                <a href="/Planos/planos.html" class="access-button">Conheça nossos planos</a>
+                <a href="{% url 'planos' %}" class="access-button">Conheça nossos planos</a>
             </section>
 
             <section class="top-illustration-card card">

@@ -1,24 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo(a) ao Sistema de Correção Wechsler</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
     <div class="container">
         <div class="header-content">
-            <img src="logo.png" alt="Logo Wechsler" class="logo"> <h1>Bem-vindo(a) ao Sistema de Correção das Escalas Wechsler de Inteligência</h1>
+            <img src="{% static 'img/Logo.png' %}" alt="Logo Wechsler" class="logo">
+            <h1>Bem-vindo(a) ao Sistema de Correção das Escalas Wechsler de Inteligência</h1>
         </div>
         <p class="justified-text">Este sistema foi desenvolvido para auxiliar psicólogos na correção das Escalas Wechsler: <strong>WAIS</strong>, <strong>WISC</strong> e <strong>WASI</strong>. O sistema funciona diretamente no navegador do usuário, sem necessidade de conexão com a internet, garantindo praticidade, rapidez e segurança.</p>
         <p class="justified-text">Basta selecionar o teste desejado abaixo, inserir os escores dos índices principais e visualizar automaticamente a pontuação total e a classificação correspondente.</p>
         <p class="justified-text">Em caso de dúvidas ou sugestões, entre em contato com o desenvolvedor.</p>
 
         <div class="button-group">
-            <a href="wais.html" class="styled-button">Corrigir WAIS</a>
-            <a href="wisc.html" class="styled-button">Corrigir WISC</a>
-            <a href="wasi.html" class="styled-button">Corrigir WASI</a>
+            <a href="#" class="styled-button">Corrigir WAIS</a>
+            <a href="{% url 'wisc' %}" class="styled-button">Corrigir WISC</a>
+            <a href="#" class="styled-button">Corrigir WASI</a>
         </div>
 
         <footer>
